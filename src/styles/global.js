@@ -17,14 +17,18 @@ export default createGlobalStyle`
     body , input , button , select{
         font-family: 'Fascinate', cursive;
         font-size:30px;
+        border-radius:10px;
+        padding:10px;
+        Margin:10px;
     }
-    h2{
-        font-size:100px;
-    }
+
     h1,h2,h3,h4,h5,h6,strong {
         font-weight:500;
         color: #f9c819;
-        
+    }
+
+    input, button , select {
+        background-color:#f9c819;
     }
 
     button{

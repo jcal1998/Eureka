@@ -29,16 +29,16 @@ const Home = () => {
             <S.Escolha>Escolha o sabor do bolo:</S.Escolha>
                 <form>
                     <S.FotoLabel1 htmlFor="1" isChecked={cakeType?.id==="1"}> 
-                    <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Leite ninho com morango' id="1" />
+                        <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Leite ninho com morango' id="1" />
                     </S.FotoLabel1>
                     <S.FotoLabel2 htmlFor="2" isChecked={cakeType?.id==="2"}>
-                    <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Brigadeiro' id="2" />
+                        <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Brigadeiro' id="2" />
                     </S.FotoLabel2>
                     <S.FotoLabel3 htmlFor="3" isChecked={cakeType?.id==="3"}>
-                    <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Nozes' id="3" />
+                        <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Nozes' id="3" />
                     </S.FotoLabel3>
                     <S.FotoLabel4 htmlFor="4" isChecked={cakeType?.id==="4"}>
-                    <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Leite ninho com chocolate' id="4" />
+                        <S.Inputfoto onChange={ (e) => setCakeType ({ name: e.target.name , id: e.target.id })} type="checkbox" name='Leite ninho com chocolate' id="4" />
                     </S.FotoLabel4>
                     <button onClick={ () => setStep(2) }>Próxima página</button>
                 </form>
@@ -96,10 +96,10 @@ const Home = () => {
                         <S.InputData placeholder="Telefone para contato" name="Phone"/>
                         <S.InputData placeholder="Endereço completo"  name="Adress"/>
                         <select onChange={(e) => setPayment (e.target.value)}>
-                                    <option value="money">Vou pagar em dinheiro</option>
-                                    <option value="card">Vou pagar no cartão</option>
-                                    <option value="pix">Transferência</option>
-                                </select>
+                            <option value="money">Vou pagar em dinheiro</option>
+                            <option value="card">Vou pagar no cartão</option>
+                            <option value="pix">Transferência</option>
+                        </select>
                         <button onClick={ () => setOrder ({ ...cakeType, ...cakeOptions, ...cakeAditional , ...userData }) }>Enviar Pedido</button>
                     </form>
                 </S.ContentStep2>

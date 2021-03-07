@@ -11,6 +11,7 @@ export const Titulo = styled.h1`
 
 export const InputData = styled.input`
     display:block; 
+    margin-bottom:20px;
 `;
 
 export const Escolha = styled.h2`
@@ -33,7 +34,7 @@ export const Inputfoto = styled.input`
 
 export const FotoLabel1 = styled.label`
     background-size:100%;
-    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;;` : css`margin : 4px;`}
+    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;;` : css`margin : 5px;`}
     background-image: url(${Leiteninhocmorango});
     height:300px;
     width:300px;
@@ -66,7 +67,7 @@ export const BackgroundStep2 = styled.div`
 
 export const FotoLabel2 = styled.label`
     background-size:100%;
-    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 4px;`}
+    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 5px;`}
     background-image: url(${Brigadeiro});
     height:300px;
     width:300px;
@@ -76,7 +77,7 @@ export const FotoLabel2 = styled.label`
 
 export const FotoLabel3 = styled.label`
     background-size:100%;
-    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 4px;`}
+    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 5px;`}
     background-image: url(${Nozes});
     height:300px;
     width:300px;
@@ -86,7 +87,7 @@ export const FotoLabel3 = styled.label`
 
 export const FotoLabel4 = styled.label`
     background-size:100%;
-    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 4px;`}
+    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 5px;`}
     background-image: url(${Leitecchoco});
     height:300px;
     width:300px;
