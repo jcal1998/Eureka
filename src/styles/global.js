@@ -27,12 +27,19 @@ export default createGlobalStyle`
         color: #f9c819;
     }
 
-    input, button , select {
+    button {
+        background-color:#3a3a3a;
+        color:#f9c819;
+    }
+    
+    input, select {
         color: #3a3a3a;
         background-color:#f9c819;
     }
 
     button{
         cursor:pointer;
+        height:65px;
+        width:300px;
     }
 `

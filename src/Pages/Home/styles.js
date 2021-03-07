@@ -4,9 +4,11 @@ import Brigadeiro from '../../images/Brigadeiro.png';
 import Nozes from '../../images/Nozes.png';
 import Leitecchoco from '../../images/Leitecchoco.png';
 import Banner from '../../images/Banner.png'
+
+
 export const Titulo = styled.h1`
     font-size:38px;
-    color: #3a3a3a;
+    color:  ;
 `;
 
 export const InputData = styled.input`
@@ -45,7 +47,7 @@ export const FotoLabel1 = styled.label`
 export const ContainerStep2 = styled.div`
     height:100vh;
     display:flex; //um do lado do outro
-    align-items:stretch; //estica o que tiver dentro
+    align-items:stretch; //stretch estica o que tiver dentro //align-items ele pegou todos itens dentro dele e alinha , acho que é na vertical
 `
 
 

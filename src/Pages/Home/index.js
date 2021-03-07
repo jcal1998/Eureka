@@ -7,18 +7,24 @@ const Home = () => {
     
     const [step, setStep] = useState(1);
     const [cakeType, setCakeType] = useState ({});
-    const [cakeOptions, setCakeOptions] = useState ("");
+    const [cakeOptions, setCakeOptions] = useState ("1kg");
     const [cakeAditional,setCakeAditional] = useState ([]);
     const [userData,setUserData] = useState ({});
     const [order,setOrder] = useState ({});
-    const [payment,setPayment] = useState ("");
-    console.log(cakeAditional);
+    const [payment,setPayment] = useState ("money");
+    
+    console.log(order);
     const toggleCakeAditional = (aditional) => {
         if (cakeAditional.includes(aditional)){  //ele vê se o array tem o item que entrou como parametro
             setCakeAditional((oldCakeAditional) => ([...oldCakeAditional].filter( (item) => item !== aditional ))) //filtra o item e devolve de acordo com a condição
         }else{
             setCakeAditional((oldCakeAditional) => ([...oldCakeAditional, aditional]))
         }
+    }
+
+    const finishOrder = (e) => {
+        e.preventDefault()
+        setOrder({cakeType,  cakeOptions, cakeAditional:{...cakeAditional}, userData , payment});
     }
 
     if(step === 1) { 
@@ -61,7 +67,7 @@ const Home = () => {
                             <option value="4kg">Eu quero de 4kg !!</option>
                         </select>
                         <S.Semititulo>Algum adicional?</S.Semititulo>
-                        <S.AditionalLabel htmlFor="morangoemcima">
+                        <S.AditionalLabel htmlFor="morango">
                             <input onChange={ (e) => toggleCakeAditional (e.target.id)} type="checkbox" id="morango" name="morangoemcima" />
                             Eu quero morango em cima do bolo !!
                         </S.AditionalLabel>
@@ -100,7 +106,7 @@ const Home = () => {
                             <option value="card">Vou pagar no cartão</option>
                             <option value="pix">Transferência</option>
                         </select>
-                        <button onClick={ () => setOrder ({ ...cakeType, ...cakeOptions, ...cakeAditional , ...userData }) }>Enviar Pedido</button>
+                        <button onClick={ (e) => finishOrder(e) }>Enviar Pedido</button>
                     </form>
                 </S.ContentStep2>
             </S.ContainerStep2>
