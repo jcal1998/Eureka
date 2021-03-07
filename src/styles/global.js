@@ -28,6 +28,7 @@ export default createGlobalStyle`
     }
 
     input, button , select {
+        color: #3a3a3a;
         background-color:#f9c819;
     }
 
