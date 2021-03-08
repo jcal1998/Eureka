@@ -16,15 +16,7 @@ export const InputImage = styled.input`
     display:none;
 `;
 
-export const Label1 = styled.label`
-    background-size:100%;
-    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;;` : css`margin : 5px;`}
-    background-image: url(${Leiteninhocmorango});
-    height:300px;
-    width:300px;
-    display:inline-block;
-    padding: 0px;
-`;
+
 
 export const Container = styled.div`
     height:100vh;
@@ -39,6 +31,17 @@ export const Content = styled.div`
     place-content:center;
     width:100%;
     max-width:800px;
+
+    form{
+        .image{
+            background-size:100%;
+            background-repeat: no-repeat ;
+            height:270px;
+            width:300px;
+            display:inline-block;
+            padding: 0px;
+        }
+    }
 `
 
 export const Background = styled.div`
@@ -47,33 +50,23 @@ export const Background = styled.div`
     background-size: cover; //cobrir tudo
 `
 
+export const Label1 = styled.label`
+    background-image: url(${Leiteninhocmorango}) ;
+    ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;;` : css`margin : 5px;`}
+`;
+
 export const Label2 = styled.label`
-    background-size:100%;
     ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 5px;`}
     background-image: url(${Brigadeiro});
-    height:300px;
-    width:300px;
-    display:inline-block;
-    padding: 0px;
 `;
 
 export const Label3 = styled.label`
-    background-size:100%;
     ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 5px;`}
     background-image: url(${Nozes});
-    height:300px;
-    width:300px;
-    display:inline-block;
-    padding: 0px;
 `;
 
 export const Label4 = styled.label`
-    background-size:100%;
     ${({isChecked})=>isChecked ? css`border:4px solid #3a3a3a;` : css`margin : 5px;`}
     background-image: url(${Leitecchoco});
-    height:300px;
-    width:300px;
-    display:inline-block;
-    padding: 0px;
 `;
 

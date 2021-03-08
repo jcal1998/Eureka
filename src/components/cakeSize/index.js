@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 
-const cakeSize = ({ changeStep1 , changeStep3 , chooseSize , toggleextra }) => {
+const cakeSize = ({ changeStep1 , changeStep3 , chooseSize , toggleExtra }) => {
     return (
         <S.Container>
             <S.Content>
@@ -17,19 +17,19 @@ const cakeSize = ({ changeStep1 , changeStep3 , chooseSize , toggleextra }) => {
                     </select>
                     <S.Title3>Algum adicional?</S.Title3>
                     <S.AdditionalLabel htmlFor="morango">
-                        <input onChange={ toggleextra} type="checkbox" id="morango" name="morangoemcima" />
+                        <input onChange={ (e) => toggleExtra(e.target.id)} type="checkbox" id="morango" name="morangoemcima" />
                         Eu quero morango em cima do bolo !!
                     </S.AdditionalLabel>
                     <S.AdditionalLabel htmlFor="waffle">
-                        <input onChange={ toggleextra} type="checkbox" id="waffle" name="waffle" />
+                        <input onChange={ (e) => toggleExtra(e.target.id)} type="checkbox" id="waffle" name="waffle" />
                         Eu quero biscoito Waffle ao redor do bolo !!
                     </S.AdditionalLabel>
                     <S.AdditionalLabel htmlFor="cobertura">
-                        <input onChange={ toggleextra} type="checkbox" id="cobertura" name="cobertura" />
+                        <input onChange={ (e) => toggleExtra(e.target.id)} type="checkbox" id="cobertura" name="cobertura" />
                         Eu quero com cobertura de chocolate em cima !!
                     </S.AdditionalLabel>
                     <S.AdditionalLabel htmlFor="pedacoschoco">
-                        <input onChange={ toggleextra} type="checkbox" id="pedacoschoco" name="pedacoschoco" />
+                        <input onChange={ (e) => toggleExtra(e.target.id)} type="checkbox" id="pedacoschoco" name="pedacoschoco" />
                         Eu quero com chocolate em pedaços por cima !!
                     </S.AdditionalLabel>
                     <button onClick={ changeStep3 }>Próxima página</button>

@@ -1,6 +1,5 @@
 import React, { useReducer} from 'react'
 import api from '../../client/axios'
-import * as S from './styles';
 import reducer, { Types, initialState } from '../../store/cake'
 import CakeType from '../../components/cakeType'
 import CakeSize from '../../components/cakeSize'
@@ -9,23 +8,19 @@ import Sucess from '../../components/sucess'
 
 const Home = () => {
     
-    const [state, dispatch] = useReducer(reducer, initialState);
+    const [state, dispatch] = useReducer(reducer, initialState); //hook alternativo para usestate, usa o metodo reducer,armazena tudo no state(como se fosse um state enorme com monte de states menores), usa o metodo dispatch,tem o valor inicial que é declarado numa const
     
-    const toggleextra = (additional) => {
+    const toggleExtra = (additional) => {//verificar se tem ou não o adicional nos extras pedidos
         if (state.extras.includes(additional)){  //ele vê se o array tem o item que entrou como parametro
             dispatch({
                 type: Types.PUT_CAKE_EXTRAS, 
-                data: {
-                    extras:state.extras.filter( (item) => item !== additional)        //filtra o item e devolve de acordo com a condição
-                } 
+                data: {extras:state.extras.filter( (item) => item !== additional)}        //filtra o item e devolve de acordo com a condição
             })
 
         }else{
             dispatch({
                 type: Types.PUT_CAKE_EXTRAS, 
-                data: {
-                    extras:[...state.extras, additional]
-                } 
+                data: {extras:[...state.extras, additional]} 
             })
 
         }
@@ -67,7 +62,7 @@ const Home = () => {
     }
     if(state.step === 2) {
         return (
-            <CakeSize toggleextra={toggleextra} changeStep1={() => dispatch({type: Types.CHANGE_STEP,data:{step:1}})} changeStep3={() => dispatch({type: Types.CHANGE_STEP,data:{step:3}})} chooseSize={(e) => dispatch({type: Types.CHOOSE_CAKE_SIZE,data: {size: e.target.value}}) }/>
+            <CakeSize toggleExtra={toggleExtra} changeStep1={() => dispatch({type: Types.CHANGE_STEP,data:{step:1}})} changeStep3={() => dispatch({type: Types.CHANGE_STEP,data:{step:3}})} chooseSize={(e) => dispatch({type: Types.CHOOSE_CAKE_SIZE,data: {size: e.target.value}}) }/>
         )
     }
     if(state.step === 3) {
