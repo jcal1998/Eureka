@@ -5,12 +5,6 @@ import Nozes from '../../images/Nozes.png';
 import Leitecchoco from '../../images/Leitecchoco.png';
 import Banner from '../../images/Banner.png'
 
-
-export const Titulo = styled.h1`
-    font-size:38px;
-    color:  ;
-`;
-
 export const InputData = styled.input`
     display:block; 
     margin-bottom:20px;
