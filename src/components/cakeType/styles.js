@@ -6,29 +6,11 @@ import Leitecchoco from '../../images/Leitecchoco.png';
 import Banner from '../../images/Banner.png'
 
 
-export const Titulo = styled.h1`
-    font-size:38px;
-    color:  ;
-`;
-
-export const InputData = styled.input`
-    display:block; 
-    margin-bottom:20px;
-`;
-
 export const Title1 = styled.h2`
     font-size:48px;
     color: #3a3a3a;
 `;
 
-export const AdditionalLabel=styled.label`
-    display:block; 
-`;
-
-export const Title3 = styled.h3`
-    font-size:36px;
-    color: #3a3a3a;
-`;
 
 export const InputImage = styled.input`
     display:none;
@@ -95,7 +77,3 @@ export const Label4 = styled.label`
     padding: 0px;
 `;
 
-export const Title2 = styled.h1`
-    font-size:80px;
-    color:#f9c819;
-`;
