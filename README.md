@@ -8,11 +8,15 @@ Projeto criado através do [Create React App](https://github.com/facebook/create
 
 ### Scripts disponíveis
 
-No diretório do projeto, rodar:
+Usar `node v12.18.4`
 
 Para instalar as dependencias, rodar: 
 
 #### `yarn install`
+
+Para iniciar o servidor:
+
+#### `node v12.18.4`
 
 Para iniciar o servidor:
 
