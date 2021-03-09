@@ -30,6 +30,6 @@ Para a criação do formulario, foi feito 4 condicionais, e baseado no estado do
 
 Resumo das tecnologias utilizadas
 
-#### `React/Hooks para o componente
+React/Hooks para o componente
 Styled-components para estilização
-Axios para envio dos dados para uma API`
+Axios para envio dos dados para uma API
