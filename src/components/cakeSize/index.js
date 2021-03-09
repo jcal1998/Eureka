@@ -17,7 +17,7 @@ const cakeSize = ({ changeStep1 , changeStep3 , chooseSize , toggleExtra , extra
                         <option value="3kg" selected={size==="3kg"}>Eu quero de 3kg !!</option>
                         <option value="4kg" selected={size==="4kg"}>Eu quero de 4kg !!</option>
                     </select>
-                    <S.Title3>Algum adicional?</S.Title3>
+                    <S.Title3>Algum adicional? Selecione abaixo :</S.Title3>
                     <S.AdditionalLabel htmlFor="morango" isChecked={extras.includes("morango")}>
                         <input onChange={ (e) => toggleExtra(e.target.id)}  type="checkbox" id="morango" name="morangoemcima" />
                         Eu quero morango em cima do bolo !!
