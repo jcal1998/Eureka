@@ -30,5 +30,5 @@ Abrir [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
 ## Descrição e solução
 
-Para a criação do formulario, foram feitas 4 condicionais, e baseado no estado do step, o return irá chamar um dos componentes, que trará uma tela específica de acordo com a etapa solicitada pelos botões de proximo e voltar. Para o armazenamento dos estados, foi usado o useReducer, com a função reducer isolada na pasta STORE. Para a estilização, foi usado o styled-components. Para envio dos dados API, foi usado o axios.post . Foi feito desestruturação de alguns dos componentes, e nenhum dos estados foi para essas pastas, ficando somente no Home, e sendo enviados através dos props. 
+Para a criação do formulario foram feitas 4 condicionais, sendo assim, baseado no estado do step o return irá chamar um dos componentes que trará uma tela específica de acordo com a etapa solicitada pelos botões de proximo e voltar. Quanto ao armazenamento dos estados foi usado o useReducer, com a função reducer isolada na pasta STORE. Para a estilização foi usado o styled-components. Também é utilizado axios como ferramenta de client http. E por fim, com relação aos componentes, foi utilizado uma abordagem de stateless, onde todos componentes nao tem estado para controlar e apenas interagem com o estado da aplicação atraves de props, centralizando o mesmo na Home.
 
