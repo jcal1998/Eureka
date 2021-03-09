@@ -20,19 +20,19 @@ const cakeSize = ({ changeStep1 , changeStep3 , chooseSize , toggleExtra , extra
                     <S.Title3>Algum adicional? Selecione abaixo :</S.Title3>
                     <S.AdditionalLabel htmlFor="morango" isChecked={extras.includes("morango")}>
                         <input onChange={ (e) => toggleExtra(e.target.id)}  type="checkbox" id="morango" name="morangoemcima" />
-                        Eu quero morango em cima do bolo !!
+                        { extras.includes("morango")? 'Eu quero morango em cima do bolo !! ✔' : 'Eu quero morango em cima do bolo !!' }
                     </S.AdditionalLabel>
                     <S.AdditionalLabel htmlFor="waffle" isChecked={extras?.includes("waffle")} >
                         <input onChange={ (e) => toggleExtra(e.target.id)} type="checkbox" id="waffle" name="waffle" />
-                        Eu quero biscoito Waffle ao redor do bolo !!
+                        { extras.includes("waffle")? 'Eu quero biscoito Waffle ao redor do bolo !! ✔' : 'Eu quero biscoito Waffle ao redor do bolo !!' }
                     </S.AdditionalLabel>
                     <S.AdditionalLabel htmlFor="cobertura" isChecked={extras?.includes("cobertura")} >
                         <input onChange={ (e) => toggleExtra(e.target.id)} isChecked={extras?.includes("cobertura")} type="checkbox" id="cobertura" name="cobertura" />
-                        Eu quero com cobertura de chocolate em cima !!
+                        { extras.includes("cobertura")? 'Eu quero com cobertura de chocolate em cima !! ✔' : 'Eu quero com cobertura de chocolate em cima !!' }
                     </S.AdditionalLabel>
                     <S.AdditionalLabel htmlFor="pedacoschoco"  isChecked={extras?.includes("pedacoschoco")} >
                         <input onChange={ (e) => toggleExtra(e.target.id)} type="checkbox" id="pedacoschoco" name="pedacoschoco" />
-                        Eu quero com chocolate em pedaços por cima !!
+                        { extras.includes("pedacoschoco")? 'Eu quero com chocolate em pedaços por cima !! ✔' : 'Eu quero com chocolate em pedaços por cima !!' }
                     </S.AdditionalLabel>
                     <button onClick={ changeStep3 }>Próxima página</button>
                 </form>

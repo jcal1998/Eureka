@@ -8,15 +8,13 @@ export const Title1 = styled.h2`
 
 export const AdditionalLabel=styled.label`
     display:block; 
+    color:#f9c819; 
+
     :hover{
         color:#3a3a3a;
     }
 
-    :active{
-        color:purple;
-    }
 
-    ${({isChecked})=>isChecked ? css`color:purple;` : css`color:#f9c819;`}
     input{
         display:none;
     }
