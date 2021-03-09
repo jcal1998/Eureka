@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles';
 
-const userFinish = ({ finishOrder , changeStep2}) => {
+const userFinish = ({ finishOrder , changeStep2 , loading}) => {
     return (
         <S.Container>
             <S.Background />
@@ -17,7 +17,7 @@ const userFinish = ({ finishOrder , changeStep2}) => {
                         <option value="card">Vou pagar no cartão</option>
                         <option value="pix">Transferência</option>
                     </select>
-                    <button type="submit">Enviar Pedido</button>
+                    <button type="submit">{ loading? 'Enviando...' : 'Enviar Pedido' }</button>
                 </form>
             </S.Content>
         </S.Container>

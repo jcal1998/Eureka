@@ -9,7 +9,7 @@ import Sucess from '../../components/sucess'
 const Home = () => {
     
     const [state, dispatch] = useReducer(reducer, initialState); //hook alternativo para usestate, usa o metodo reducer,armazena tudo no state(como se fosse um state enorme com monte de states menores), usa o metodo dispatch,tem o valor inicial que é declarado numa const
-    
+
     const toggleExtra = (additional) => {//verificar se tem ou não o adicional nos extras pedidos
         if (state.extras.includes(additional)){  //ele vê se o array tem o item que entrou como parametro
             dispatch({
@@ -44,16 +44,17 @@ const Home = () => {
                     payment : payment.value
                 }
             }
+            dispatch({type: Types.CHANGE_LOADING , data: {loading : true}})
             await api.post('/', {order});
             dispatch({type: Types.CHANGE_STEP,data:{step:4}})
         }catch(err){
             //do something about the error
             alert('Ops deu erro')
+        }finally{
+            dispatch({type: Types.CHANGE_LOADING , data: {loading : false}})
         }
 
     }
-
-    console.log(state)
 
     if(state.step === 1) { 
         return (
@@ -67,7 +68,7 @@ const Home = () => {
     }
     if(state.step === 3) {
         return (
-            <UserFinish finishOrder={finishOrder} changeStep2={() => dispatch({type: Types.CHANGE_STEP,data:{step:2}})} />
+            <UserFinish finishOrder={finishOrder} loading={state.loading} changeStep2={() => dispatch({type: Types.CHANGE_STEP,data:{step:2}})} />
         )
     }
 

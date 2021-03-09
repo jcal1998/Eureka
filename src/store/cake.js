@@ -3,13 +3,15 @@ export const initialState = {
     type:{},
     size:"1kg",
     extras:[],
+    loading:false
 };
 
 export const Types = {
     CHANGE_STEP: 'CHANGE_STEP',
     CHOOSE_CAKE_TYPE: 'CHOOSE_CAKE_TYPE',
     CHOOSE_CAKE_SIZE: 'CHOOSE_CAKE_SIZE',
-    PUT_CAKE_EXTRAS: 'PUT_CAKE_EXTRAS'
+    PUT_CAKE_EXTRAS: 'PUT_CAKE_EXTRAS',
+    CHANGE_LOADING: 'CHANGE_LOADING'
 }
 //reducer vem da epoca do redux, ele recebe o estado atual como se fosse a variavel do usestate, e recebe tambem o action, para disparar a ação
 function reducer(state, action) { //ação que esta sendo disparada,recebe action.type e action.data
@@ -33,6 +35,11 @@ function reducer(state, action) { //ação que esta sendo disparada,recebe actio
         return{
             ...state,
             extras: [...action.data.extras]
+        }
+    case Types.CHANGE_LOADING:
+        return{
+            ...state,
+            loading: action.data.loading
         }
     default:
       throw new Error();
