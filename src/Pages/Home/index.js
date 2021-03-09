@@ -34,7 +34,7 @@ const Home = () => {
         try {
             e.preventDefault()
             const {name , phone, address , payment} = e.target
-            const {step, ...data}=state
+            const {step, loading, ...data}=state
             const order = {
                 ...data,
                 userData:{
