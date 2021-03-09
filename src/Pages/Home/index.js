@@ -4,7 +4,7 @@ import reducer, { Types, initialState } from '../../store/cake'
 import CakeType from '../../components/cakeType'
 import CakeSize from '../../components/cakeSize'
 import UserFinish from '../../components/userData'
-import Sucess from '../../components/sucess'
+import Success from '../../components/success'
 
 const Home = () => {
     
@@ -74,7 +74,7 @@ const Home = () => {
 
     if(state.step === 4) {
         return (
-            <Sucess />
+            <Success />
         )
     }
 

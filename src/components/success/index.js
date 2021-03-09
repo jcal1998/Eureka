@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles';
 
-const sucess = () =>{
+const success = () =>{
     return (
         <S.Container>
         <S.Content>
@@ -13,4 +13,4 @@ const sucess = () =>{
     )
 }
 
-export default sucess;
+export default success;
