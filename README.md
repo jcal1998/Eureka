@@ -32,4 +32,4 @@ Resumo das tecnologias utilizadas
 
 #### `React/Hooks para o componente
 Styled-components para estilização
-Axios para envio dos dados para uma API
+Axios para envio dos dados para uma API`
