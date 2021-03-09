@@ -63,7 +63,7 @@ const Home = () => {
     }
     if(state.step === 2) {
         return (
-            <CakeSize toggleExtra={toggleExtra} changeStep1={() => dispatch({type: Types.CHANGE_STEP,data:{step:1}})} changeStep3={() => dispatch({type: Types.CHANGE_STEP,data:{step:3}})} chooseSize={(e) => dispatch({type: Types.CHOOSE_CAKE_SIZE,data: {size: e.target.value}}) }/>
+            <CakeSize toggleExtra={toggleExtra} size={state.size} extras={state.extras} changeStep1={() => dispatch({type: Types.CHANGE_STEP,data:{step:1}})} changeStep3={() => dispatch({type: Types.CHANGE_STEP,data:{step:3}})} chooseSize={(e) => dispatch({type: Types.CHOOSE_CAKE_SIZE,data: {size: e.target.value}}) }/>
         )
     }
     if(state.step === 3) {

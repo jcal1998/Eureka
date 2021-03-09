@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
 import Banner from '../../images/Banner.png'
 
 export const Title1 = styled.h2`
@@ -8,6 +8,15 @@ export const Title1 = styled.h2`
 
 export const AdditionalLabel=styled.label`
     display:block; 
+    :hover{
+        color:#3a3a3a;
+    }
+
+
+    ${({isChecked})=>isChecked ? css`color:purple;` : css`color:#f9c819;`}
+    input{
+        display:none;
+    }
 `;
 
 export const Title3 = styled.h3`
@@ -28,6 +37,7 @@ export const Content = styled.div`
     place-content:center;
     width:100%;
     max-width:800px;
+
 `
 
 export const Background = styled.div`
