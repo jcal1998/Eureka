@@ -25,7 +25,7 @@ Para iniciar o servidor:
 
 Abrir [http://localhost:3000](http://localhost:3000) para ver no navegador.
 
-##Para ver a demo do projeto, acesso o link:
+## Para ver a demo do projeto, acesso o link:
 [https://tortasdalina.netlify.app/](https://tortasdalina.netlify.app/)
 
 ## Descrição e solução
