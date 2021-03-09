@@ -24,7 +24,7 @@ Abrir [http://localhost:3000](http://localhost:3000) para ver no navegador.
 ##Para ver a demo do projeto, acesso o link:
 [https://tortasdalina.netlify.app/](https://tortasdalina.netlify.app/)
 
-##Descrição e solução
+## Descrição e solução
 
 Para a criação do formulario, foi feito 4 condicionais, e baseado no estado do step, o return irá chamar um dos componentes, que trará uma tela específica de acordo com a etapa solicitada pelos botões de proximo e voltar. Para o armazenamento dos estados, foi usado o useReducer, com a função reducer isolada na pasta STORE. Para a estilização, foi usado o styled-components. Para envio dos dados API, foi usado o axios.post . Foi feito desestruturação de alguns dos componentes, e nenhum dos estados foi para essas pastas, ficando somente no Home, e sendo enviados através dos props. 
 
