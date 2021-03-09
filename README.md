@@ -2,7 +2,7 @@
 
 O teste consiste na criação de um formulário multi-steps. Na primeira etapa, é possível escolher qual sabor do bolo, dentre 4 opções. Na segunda etapa, podemos escolher o tamanho do bolo e os adicionais. Na terceira etapa, preenche-se os campos com os dados do solicitante, e também o meio de pagamento. No Submit, é enviado os dados do pedido para a API do mocky, caso dê sucesso, é enviado para o step 4, com uma tela de sucesso, caso contrário é devolvido um error.
 
-##Desenvolvimento
+## Desenvolvimento
 
 Projeto criado através do [Create React App](https://github.com/facebook/create-react-app).
 
