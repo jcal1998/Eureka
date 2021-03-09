@@ -12,6 +12,9 @@ export const AdditionalLabel=styled.label`
         color:#3a3a3a;
     }
 
+    :active{
+        color:purple;
+    }
 
     ${({isChecked})=>isChecked ? css`color:purple;` : css`color:#f9c819;`}
     input{
